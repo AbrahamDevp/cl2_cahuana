@@ -1,0 +1,36 @@
+<html>
+<link>
+<meta charset="UTF-8"/>
+<title th:text="${titulo}"></title>	
+<link rel="stylesheet" type="text/css" href="@{/css/styles.css}"></link>
+</head>
+<body onload="clock()">
+	<h1 class="color-rojo" th:text="${titutlo}"></h1>
+	<h2 class="color-azul">Personal</h2>
+	<img th:src="@{/images/personal.png}"></img>
+	
+	<div th:if="${personales.isEmpty()}"></div>
+	<table th:if="${not personales.isEmpty()}">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Sueldo</th>
+            <th>Area</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="personal: ${personales}">
+            <td th:text="${personal.nombre}"></td>  
+            <td th:text="${personal.codigo}"></td>
+            <td th:text="${personal.sueldo}"></td>
+            <td th:text="${personal.area}"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+</body>	
+</html>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
