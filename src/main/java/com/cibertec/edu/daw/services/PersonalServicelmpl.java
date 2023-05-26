@@ -28,3 +28,7 @@ public class PersonalServicelmpl implements PersonalService {
         return personalDao.findByCodigo_Area(codigoArea);
     }
 }
+
+//Profesor ME FUNCIONO TODO HASTA QUE INTENTE IMPLEMENTAR EL REQUEST PARAM  :,V Y AHI YA ME DIO UN 
+//ERROR PROFESOR , PERO SI FUNCIONO Y ME DIO LA LISTA ANTER DE QUERER IMPLEMENTARLO PERO AVANZE LO 
+//MAS QUE PUDE , ME SALE UN ERROR PERO NO LO ENCUENTRO
